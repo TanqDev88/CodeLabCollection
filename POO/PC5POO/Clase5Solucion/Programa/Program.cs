@@ -9,10 +9,11 @@ piloto.DNI=11111;
 var hunkers=new Avion();
 hunkers.Abordar(piloto);
 
-var pasajero1=new Pasajero();
-pasajero1.Nombre="Marina";
-pasajero1.Apellido="Cacha";
-pasajero1.DNI=124578;
+piloto.SaludarPiloto();
+var pasajero1=new Pasajero(12345678,"Marina");
+// pasajero1.Nombre="Marina";
+// pasajero1.Apellido="Cacha";
+// pasajero1.DNI=124578;
 
 hunkers.Abordar(pasajero1);
 
