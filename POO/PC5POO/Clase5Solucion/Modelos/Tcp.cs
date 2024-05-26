@@ -5,8 +5,5 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    public class Tcp : Persona
-    {
-        
-    }
+
 }

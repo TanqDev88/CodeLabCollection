@@ -11,14 +11,25 @@ namespace Modelos
         public string Nombre { get; set; }
         public string Apellido { get; set; }
 
+        public Persona(){
+
+        }
         public Persona(int DNI, string Nombre)
         {
             this.DNI = DNI;
             this.Nombre = Nombre;
         }
 
-        public void Saludar(){
-            Console.ForegroundColor=ConsoleColor.Red
+        public Persona(int DNI, string Nombre, string Apellido) : this(DNI, Nombre)//Para reutilizar las propiedades DIN y nombre del otro constructor de la misma clase se utiliza la palabra THIS
+        {
+            this.Nombre = Apellido;
+        }
+
+        public void Saludar()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.WriteLine("este es el saludo declarado en persona");
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
     }
