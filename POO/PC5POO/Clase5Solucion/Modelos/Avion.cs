@@ -9,28 +9,33 @@ namespace Modelos
     public class Avion
     {
         private Piloto MiPiloto;
-        private List<Pasajero> ListaPasajeros=new List<Pasajero>();
-        private List<Tcp> Tripulantes=new List<Tcp>();
+        private List<Pasajero> ListaPasajeros = new List<Pasajero>();
+        private List<Tcp> Tripulantes = new List<Tcp>();
         public void Abordar(Persona pers)
         {
-            if(pers.GetType() == typeof(Pasajero))
+            if (pers.GetType() == typeof(Pasajero))
             {
                 ListaPasajeros.Add((Pasajero)pers);
             }
-            else if(pers is Tripulacion){
-                if(pers.GetType()==typeof(Tcp))
-                Tripulantes.Add((Tcp)pers);
+            else if (pers is Tripulacion)
+            {
+                if (pers.GetType() == typeof(Tcp))
+                    Tripulantes.Add((Tcp)pers);
                 else
-                
-        MiPiloto = (Piloto)pers;
-                
+
+                    MiPiloto = (Piloto)pers;
+
             }
         }
 
 
         public void Reporte()
         {
-
+            foreach (var azafata in Tripulantes)
+            {
+                azafata.SaludoCordial();
+                azafata.Despedir();
+            }
         }
     }
 }

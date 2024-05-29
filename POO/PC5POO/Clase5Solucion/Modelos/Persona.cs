@@ -11,7 +11,8 @@ namespace Modelos
         public string Nombre { get; set; }
         public string Apellido { get; set; }
 
-        public Persona(){
+        public Persona()
+        {
 
         }
         public Persona(int DNI, string Nombre)
@@ -31,6 +32,8 @@ namespace Modelos
             System.Console.WriteLine("este es el saludo declarado en persona");
             Console.ForegroundColor = ConsoleColor.White;
         }
+
+
 
     }
 }
