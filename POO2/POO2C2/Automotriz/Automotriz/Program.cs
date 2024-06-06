@@ -10,10 +10,10 @@ namespace Automotriz
     {
         static void Main(string[] args)
         {
-            var fordKa = new Automovil();
+            var fordKa = new Automovil(123, "vmw", "Camos", "pyton");
             fordKa.Acelerar(410);
 
-            Automovil ds4 = new Automovil();
+            Automovil ds4 = new Automovil(123, "vmw", "Camos", "pyton");
             ds4.Acelerar(320);
 
         }
@@ -28,6 +28,17 @@ namespace Automotriz
             int año;
             int velocidad_max;
             int velocidad;
+
+            //Metodos
+            //Constructor de la clase
+            public Automovil(int velocidad_maxima, string color, string marca, string modelo)
+            {
+                this.velocidad = 0;
+                this.velocidad_max = velocidad_maxima;
+                this.color = color;
+                this.marca = marca;
+                this.año = 2024;
+            }
 
             public void Acelerar(int kms)
             {
