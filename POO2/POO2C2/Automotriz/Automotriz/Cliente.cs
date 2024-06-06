@@ -8,8 +8,8 @@ namespace Automotriz
 {
     public class Cliente
     {
-        string nombre;
-        string apellido;
+        private string nombre;
+        private string apellido;
         int numero_documento;
         string tipo_documento;
 
