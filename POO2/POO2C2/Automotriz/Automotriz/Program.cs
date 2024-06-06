@@ -16,6 +16,11 @@ namespace Automotriz
             Automovil ds4 = new Automovil(123, "vmw", "Camos", "pyton");
             ds4.Acelerar(320);
 
+            //Clase creada desde otro modulo
+            DateTime nacimiento_marcos = new DateTime(1995, 12, 10);
+            Cliente marcos = new Cliente("Marcos", "Chuck", nacimiento_marcos);
+            Console.WriteLine(marcos.Obtener_edad());
+
         }
 
         //crear clases
