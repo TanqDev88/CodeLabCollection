@@ -6,30 +6,19 @@ using System.Threading.Tasks;
 
 namespace Automotriz
 {
-    public class Cliente
+    public class Cliente:Persona
     {
-        private string nombre;
-        private string apellido;
-        int numero_documento;
-        string tipo_documento;
+        private string tipoIva;
+        private int numeroCuit;   
 
-        DateTime fecha_nacimiento;
-
-        public DateTime FechaNacimiento { get; set; }
 
         //CONSTRUCTOR
-        public Cliente(string nombre, string apellido, DateTime fecha_nac)
+        public Cliente(string nombre, string apellido, string tipoDocumento, int numeroDocumento, int numeroCuit) : base (apellido, nombre, tipoDocumento, numeroDocumento)
         {
-            this.nombre = nombre;
-            this.apellido = apellido;
-            this.fecha_nacimiento = fecha_nac;
+            this.numeroCuit = numeroCuit;
+            this.tipoIva = "CF";
         }
 
-        public int Obtener_edad()
-        {
-            DateTime fecha_actual = DateTime.Now;
-            int edad = fecha_actual.Year - this.fecha_nacimiento.Year;
-            return edad;
-        }
+
     }
 }
