@@ -18,6 +18,11 @@ namespace Automotriz
             this.numeroCuit = numeroCuit;
             this.tipoIva = "CF";
         }
+        //Sobrecarga
+        public Cliente(string nombre, string apellido, string tipoDocumento, string numeroDocumento, int numeroCuit) : base (nombre, apellido, tipoDocumento, numeroDocumento)
+        {
+            this.numeroCuit = numeroCuit;
+        }
 
 
     }

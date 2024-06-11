@@ -65,6 +65,18 @@ namespace Automotriz
                     this.velocidad = this.velocidad_max;
                 }
             }
+            //Sobrecarga
+            public void Acelerar(int kms, bool tiene_nitro)
+            {
+                if(tiene_nitro == true)
+                {
+                    this.Acelerar(kms * 2);
+                }
+                else
+                {
+                    this.Acelerar(kms);
+                }
+            }
             public int Get_velocidad()
             {
                 return this.velocidad;
