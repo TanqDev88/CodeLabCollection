@@ -48,6 +48,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Folio.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Movimiento.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />

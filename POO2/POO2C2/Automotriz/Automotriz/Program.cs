@@ -21,6 +21,7 @@ namespace Automotriz
             //Console.WriteLine(marcos.Obtener_edad());
             Folio folioNro01 = new Folio(1);
             Factura01.SetFolio(folioNro01); //Ejemplo de asociacion
+            Factura01.AgregarItem("limpieza de barr", 12, 45, 10, 15);
 
         }
 

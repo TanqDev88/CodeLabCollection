@@ -24,6 +24,11 @@ namespace Automotriz
             this.numeroCuit = numeroCuit;
         }
 
+        public void GetNombreCompleto
+        {
+            this.Nom
+        }
+
 
     }
 }
