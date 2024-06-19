@@ -30,9 +30,9 @@ namespace Automotriz
         {
             this.folio = folio;
         }
-        public void AgregarItem(string concepto, double cantidad, double valorUnidad, double Iva, double descuento)
+        public void AgregarItem(Articulo articulo, double cantidad, double valorUnidad, double Iva, double descuento)
         {
-            Item item = new Item(concepto, cantidad, valorUnidad, Iva, descuento);
+            Item item = new Item(articulo, cantidad, valorUnidad, Iva, descuento);
             this.items.Add(item);
         }
         public List<Item> GetItems() {
@@ -46,7 +46,7 @@ namespace Automotriz
             Console.WriteLine(" **Detalle** ");
             foreach (var item in this.GetItems())
             {
-                Console.WriteLine(item.GetConcepto() + "- cantidad: " + item.GetCantidad());
+                Console.WriteLine(item.GetArticulo() + "- cantidad: " + item.GetCantidad());
             }
         }
     }

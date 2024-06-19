@@ -13,6 +13,10 @@ namespace Automotriz
             Cliente mateo = new Cliente("Mateo", "Sarac", "DU", 123123, 4561233);
             Console.WriteLine(mateo.Obtener_edad());
             Empleado Susana = new Empleado("sunana", "Aguar", "DU", 1274532164);
+            Articulo hdSmsSSD = new Articulo("Disco solido Sanson", 4578);
+            hdSmsSSD.SetStock(50);
+            Articulo impresora = new Articulo("Impresora laser", 4545);
+            impresora.SetStock(10);
             DateTime fechaFactura01 = new DateTime(2023, 10, 12);
             Movimiento Factura01 = new Movimiento(1001, fechaFactura01, mateo);//Ejemplo de agregacion no se puede crear la instancia de Movimiento si no tengo creado el cliente
             //Clase creada desde otro modulo

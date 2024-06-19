@@ -8,25 +8,25 @@ namespace Automotriz
 {
     public class Item
     {
-        private string concepto;
+        private Articulo articulo;
         private double cantidad;
         private double valorUnidad; //Precio unitario
         private double valorIva; //% IVA
         private double valorDescuento; //% Descuento
 
 
-        public Item(string concepto, double cantidad, double valorUnidad, double valorIva, double valorDescuento)
+        public Item(Articulo articulo, double cantidad, double valorUnidad, double valorIva, double valorDescuento)
         {
-            this.concepto = concepto;
+            this.articulo = articulo;
             this.cantidad = cantidad;
             this.valorUnidad = valorUnidad;
             this.valorIva = valorIva;
             this.valorDescuento = valorDescuento;
         }
 
-        public string GetConcepto()
+        public string GetArticulo()
         {
-            return this.concepto.ToString();
+            return this.articulo.GetNombre() + " - " + this.articulo.GetCodigo().ToString();
         }
 
         public string GetCantidad()
@@ -35,3 +35,6 @@ namespace Automotriz
         }
     }
 }
+
+
+// 
