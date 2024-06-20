@@ -18,7 +18,7 @@ namespace Negocio
             tabla = objeto.Mostrar();
             return tabla;
         }
-        //EDsto es todo lo qu es e va a hacer en la capa de negocio
+        //Esto es todo lo qu es e va a hacer en la capa de negocio
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -10,7 +11,7 @@ namespace Datos
 {
     public class D_Articulos
     {
-        private DB_Conexion conexion = new DB_Conexion();
+        private DB_Coneccion conexion = new DB_Coneccion();
         //vamos a necesitar un qry
         SqlCommand query = new SqlCommand();
         SqlDataReader reader;
@@ -24,7 +25,15 @@ namespace Datos
             tabla.Load(reader);
             return tabla;
         }
-
+        //Crear articulos
+        public void Insertar(string nombre, double precio, int stock)
+        {
+            query.Connection = conexion.AbrirConexion();
+            query.CommandText = "SET IDENTITY_INSERT Articulos OFF; insert into Articulos values('" + nombre + "', " + precio + ", " + stock + ");";
+            query.ExecuteNonQuery();
+        }
     }
-    //Crea un objeto private y hacemos la instancia de la clase DB_CONEXION 
+
 }
+    //Crea un objeto private y hacemos la instancia de la clase DB_CONEXION 
+
