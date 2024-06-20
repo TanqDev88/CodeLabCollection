@@ -20,5 +20,15 @@ namespace FrontEnd
         {
             MostarArticulos();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void BGrabar_Click(object sender, EventArgs e)
+        {
+            objetos.InsertarArticulo(FNombre.Text, FPrecio.Text, FStock.Text);
+            MessageBox.Show("Articulo cargado");
+        }
     }
 }

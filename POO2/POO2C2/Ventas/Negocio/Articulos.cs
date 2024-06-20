@@ -19,6 +19,10 @@ namespace Negocio
             return tabla;
         }
         //Esto es todo lo qu es e va a hacer en la capa de negocio
+        public void InsertarArticulo(string nombre, string precio, string stock)
+        {
+            object.Insertar(nombre, Convert.ToDouble(precio), Convert.ToInt32(stock));
+        }
 
     }
 }
