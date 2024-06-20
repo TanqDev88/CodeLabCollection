@@ -9,6 +9,24 @@ using System.Data.SqlClient; //Agregar esta otra referencia
 namespace Datos
 {
     public class DB_Coneccion
-    {
+    {//Coneccion
+        private SqlConnection Conexion = new SqlConnection("Server=JORGE_PC\\SQLEXPRESS01; DataBase=Laboratorio;Intregrated Security= true");
+
+//Metodo que abre la coneccion
+        public SqlConection AbrirConexion()
+        { 
+            if(Conexion.State == ConnectionState.Closed)
+            { Conexion.Open();
+            }
+            return Conexion;
+        }
+//Metodo que cierra la coneccion
+        public SqlConection CerrarConexion()
+        {
+            if (Conexion.State == ConnectionState.Open)
+            {
+                Conexion.Close();
+            }
+            return Conexion;
+        }
     }
-}
