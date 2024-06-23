@@ -16,7 +16,7 @@ namespace Datos
         SqlCommand query = new SqlCommand();
         SqlDataReader reader;
         DataTable tabla = new DataTable();
-        //Hacer el metodo que devielva la tabla con todos los articulos
+        //Hacer el metodo que retorne la tabla con todos los articulos
         public DataTable Mostrar()
         {
             query.Connection = conexion.AbrirConexion();
@@ -35,5 +35,4 @@ namespace Datos
     }
 
 }
-    //Crea un objeto private y hacemos la instancia de la clase DB_CONEXION 
 
