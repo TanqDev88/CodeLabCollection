@@ -1,0 +1,17 @@
+Descripción:
+Se desea obtener el ticket de una transferencia bancaria con el siguiente detalle:
+Nombre, apellido y número del cliente operador del cajero.
+Monto de la operación y tipo (retiro o ingreso de dinero). Moneda en la que se realizó la transacción (pesos
+o U$S).
+Fecha de la transacción.
+Número y dirección de la sucursal bancaria.
+El cliente tiene los siguientes datos:
+Susana Herrera, DU no 24155210, Vive en calle Lavalle 1250 de la localidad de Diamante en la pcia. de Entre Ríos (CP
+3105). Número de cliente: 10544.
+Datos de la transacción: el día 20 de junio de este año retiró 15000 pesos de la sucursal número 1670 del Banco
+Nación de la misma localidad con dirección Gral. Dr. Pascual Echagüe 350.
+
+Se pide:
+Realizar el diagrama de clases para un sistema de un cajero automático de un banco, incluyendo los datos necesarios
+para realizar el código y poder representar el caso descripto anteriormente.
+En C# realizar el código del diagrama y obtener a través de un método los datos que se piden.
