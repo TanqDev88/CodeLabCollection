@@ -22,3 +22,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+document.querySelector<HTMLDivElement>('#app')!.innerHTML = `Hello world`
+console.log('Hello word on the console')
